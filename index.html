@@ -1,0 +1,223 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InkSpace — Modern Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            InkSpace
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#posts">Explore</a>
+            <a href="#write">Write</a>
+        </div>
+
+        <button class="nav-button" onclick="document.getElementById('write').scrollIntoView({behavior:'smooth'})">
+            + Create Post
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header id="home" class="hero">
+
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                ✨ YOUR IDEAS. YOUR STORY.
+            </div>
+
+            <h1>
+                Stories that
+                <span>deserve</span>
+                to be heard.
+            </h1>
+
+            <p>
+                A beautiful space to write, share and discover
+                ideas that matter.
+            </p>
+
+            <button
+                class="hero-button"
+                onclick="document.getElementById('write').scrollIntoView({behavior:'smooth'})"
+            >
+                Start Writing
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <!-- CREATE POST -->
+
+        <section id="write" class="write-card">
+
+            <div class="section-label">
+                <span></span>
+                CREATE SOMETHING
+            </div>
+
+            <h2 id="formTitle">Write your next story</h2>
+
+            <p class="section-description">
+                Turn your thoughts into something worth reading.
+            </p>
+
+            <form id="postForm">
+
+                <input type="hidden" id="postId">
+
+                <div class="input-row">
+
+                    <div class="input-group">
+                        <label>Post Title</label>
+
+                        <input
+                            type="text"
+                            id="title"
+                            placeholder="Give your story a great title..."
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>Author</label>
+
+                        <input
+                            type="text"
+                            id="author"
+                            placeholder="Your name"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Your Story</label>
+
+                    <textarea
+                        id="content"
+                        placeholder="Start writing your story here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" id="submitBtn" class="publish-button">
+                        <span>✦</span>
+                        Publish Story
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelBtn"
+                        class="cancel"
+                        style="display:none;"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- POSTS -->
+
+        <section id="posts" class="posts-section">
+
+            <div class="posts-heading">
+
+                <div>
+                    <div class="section-label">
+                        <span></span>
+                        DISCOVER
+                    </div>
+
+                    <h2>Latest stories</h2>
+                </div>
+
+                <div class="search-wrapper">
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search stories..."
+                    >
+                </div>
+
+            </div>
+
+
+            <div id="posts"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ✦ InkSpace
+        </div>
+
+        <p>
+            Write freely. Share boldly. Inspire others.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 InkSpace. Made with ♥
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
